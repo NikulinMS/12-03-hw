@@ -20,12 +20,24 @@ where a.district like 'K%a' and a.district not like '% %';
 ### Задание 2
 
 
+`Возможны 2 варианта`
+
 ```
-select *
+select * 
 from payment p 
-where p.payment_date  between  '2005-06-15' and '2005-06-18';
+where cast(p.payment_date as date)  between  '2005-06-15' and '2005-06-18';
 ```
-![task_2.png](img%2Ftask_2.png)
+![task_2_1.png](img%2Ftask_2_1.png)
+
+`или`
+
+```
+select * 
+from payment p 
+where p.payment_date between  '2005-06-15 00:00:00' and '2005-06-18 23:59:59';
+```
+
+![task_2_2.png](img%2Ftask_2_2.png)
 
 ---
 
