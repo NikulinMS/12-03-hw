@@ -75,5 +75,9 @@ from customer c
 ### Задание 6*
 
 ```
-
+select c.email , concat(left(c.first_name, 1), lower(substr(substring_index(c.email, '@', 1), 2, char_length( substring_index(c.email, '@', 1))))) first, 
+concat(upper(left(substring_index(c.email, '@', -1), 1)), substr(substring_index(c.email, '@', -1), 2, char_length(substring_index(c.email, '@', -1)))) second
+from customer c 
 ```
+
+![task_6.png](img%2Ftask_6.png)
