@@ -64,5 +64,16 @@ where c.first_name like 'Kelly' or c.first_name like 'Willie' and c.active = 1;
 ### Задание 5*
 
 ```
+select c.email , substring_index(c.email, '@', 1), substring_index(c.email, '@', -1)
+from customer c 
+```
+
+![task_5.png](img%2Ftask_5.png
+
+---
+
+### Задание 6*
+
+```
 
 ```
